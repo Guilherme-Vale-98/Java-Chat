@@ -24,7 +24,7 @@ public class MessageController {
         message.setTimestamp(dateObject.format(myFormat));
 
         try {
-            kafkaTemplate.send(KAFKA_CHAT_TOPIC, message).get();
+            kafkaTemplate.send("chat_topic", message).get();
         }catch (InterruptedException | ExecutionException e){
             throw new RuntimeException(e);
         }

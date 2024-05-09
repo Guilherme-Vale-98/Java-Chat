@@ -18,7 +18,7 @@ import java.util.Map;
 @EnableKafka
 @Configuration
 public class KafkaProducerConfig {
-    private static final String BOOTSTRAPS_SERVERS = "localhost:9092,localhost:9093,localhost:9094,";
+    private static final String BOOTSTRAPS_SERVERS = "localhost:29092,localhost:29093,localhost:29094";
     @Bean
     public ProducerFactory<String, Message> producerFactory(){
         Map<String, Object> configs = new HashMap<>();
